@@ -1,0 +1,38 @@
+add_newline = false
+
+#"$schema" = 'https://starship.rs/config-schema.json'
+
+[character]
+success_symbol = "[❯](bold green) "
+error_symbol = "[✗](bold red) "
+vicmd_symbol = "[N](bold cyan)"
+
+[directory]
+truncation_length = 10
+truncation_symbol = "…/"
+truncate_to_repo = true # truncates directory to root folder if in github repo
+style = "bold italic #87A752"
+format = "[$path]($style)[ $read_only]($read_only_style)"
+#format = "[$path]($style)[ $read_only]($read_only_style)"
+
+[time]
+disabled = true
+
+[hostname]
+ssh_only = true
+format =  "[$hostname](bold green) "
+
+[shell]
+fish_indicator = "🐟"
+#fish_indicator = ""
+disabled = false
+
+
+[python]
+format = "[$symbol($version)]($style)"
+
+[golang]
+format = " [$symbol($version )]($style)"
+
+[lua]
+format = " [$symbol($version)]($style)"
