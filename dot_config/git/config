@@ -1,0 +1,11 @@
+[user]
+	name = Heikki Pitkänen
+	email = heikki.pitkanen@iki.fi
+[color]
+	ui = true
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[help]
+	autocorrect = 1
