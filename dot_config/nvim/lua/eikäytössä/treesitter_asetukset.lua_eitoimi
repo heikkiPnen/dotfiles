@@ -1,0 +1,40 @@
+-- Treesitter asetukset
+-- Jos treesitter antaa virheilmoituksia , suorita :TSUpdate
+-- --------------------------------------------------------
+
+local M = {
+    "nvim-treesitter/nvim-treesitter",
+    dev = false,
+    build = ":TSUpdate",
+    event = "BufReadPost",
+
+    dependencies = {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        "RRethy/nvim-treesitter-textsubjects",
+        "nvim-treesitter/nvim-treesitter-refactor",
+        "mfussenegger/nvim-treehopper",
+        { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
+    },
+}
+M.config = function()
+    require 'nvim-treesitter.configs'.setup {
+        auto_install = true,
+        highlight = {
+            enable = true, -- false will disable the whole extension
+            disable = {}, -- list of language that will be disabled
+        },
+        incremental_selection = {
+            enable = true,
+            keymaps = {
+                init_selection = "gnn",
+                node_incremental = "grn",
+                scope_incremental = "grc",
+                node_decremental = "grm",
+            },
+        },
+        indent = {
+            enable = true
+        },
+    }
+end
+return M

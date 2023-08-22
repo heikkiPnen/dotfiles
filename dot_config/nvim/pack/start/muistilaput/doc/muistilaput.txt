@@ -1,0 +1,24 @@
+*muistilaput.txt* Yksinkertainen muistilaput -ohjelma.
+
+==============================================================================
+Aluksi                                                  *muistilaput-aluksi* 
+
+Muistilaput -plugin sisältää pari funktiota helpottamaan mlappujen tekemistä.
+
+------------------------------------------------------------------------------
+Lyhenteet                                               *muistilaput-lyhenteet*
+
+`<leader>z`     Käynnistä plugin
+`<cr>`          Avaa kursorin alla oleva linkki
+------------------------------------------------------------------------------
+Komennot                                                *muistilaput-komennot*
+
+:MLteeLinkki
+
+Luodaan markdown linkki sanan tai hakasuluissa olevan tekstin perusteella.  
+
+:MLavaaLinkki
+
+Avataan kursorin alla oleva linkki.
+
+==============================================================================

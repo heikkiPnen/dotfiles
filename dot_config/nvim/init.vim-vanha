@@ -1,0 +1,7 @@
+source $HOME/.config/nvim/asetukset/plugins.vimrc
+source $HOME/.config/nvim/asetukset/plugin_asetukset.vimrc
+source $HOME/.config/nvim/asetukset/keys.vimrc
+source $HOME/.config/nvim/asetukset/nvim-0.5.vimrc
+source $HOME/.config/nvim/asetukset/init.vimrc
+
+

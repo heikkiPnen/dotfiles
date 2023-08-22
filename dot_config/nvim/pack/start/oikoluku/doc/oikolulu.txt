@@ -1,0 +1,10 @@
+*oikoluluku.txt*            Oikolukuku - oikoluku plugin               21.10.2021
+
+Description     Oikoluku is a simple spell-checker plugin
+                for Finnish language.
+
+Author           Heikki <heikki.pitkanen@iki.fi>
+
+
+=========================================================================
+COMMANDS                                            *:Oikoluku*
