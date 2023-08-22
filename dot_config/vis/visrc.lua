@@ -1,17 +1,18 @@
 require('vis')
 
---local plug = require('plugins/vis-plug')
---plug.init(plugins, true)
---plug.path('/home/heikki/.local/share/vis-plug')
---
---local plugins = {
---  {'erf/vis-sneak'},
---  {'~mcepl/vis-fzf-open'},
---  {'samlwood/vis-gruvbox.git', theme = true, file = 'gruvbox'}, 
---}
+local plug = require('plugins/vis-plug')
+plug.path('/home/heikki/.local/share/vis-plug')
 
+local plugins = {
+  {'erf/vis-sneak'},
+  {'https://git.sr.ht/~mcepl/vis-fzf-open'},
+  {'https://github.com/roguh.vis-copypasta'},
+  {'samlwood/vis-gruvbox.git', theme = true, file = 'gruvbox'}, 
+}
+
+plug.init(plugins, true)
 --plugin_vis_open = require('plugins/vis-fzf-open')
-require('plugins/vis-sneak')
+--require('plugins/vis-sneak')
 
 -- Path to the fzf executable (default: "fzf")
 --plugin_vis_open.fzf_path = (
@@ -22,7 +23,7 @@ require('plugins/vis-sneak')
 vis.events.subscribe(vis.events.INIT, function()
 	--global configuration--
 	vis:command('set change-256colors off') --see vis#613
-    vis:command('set theme gruvbox')
+  --vis:command('set theme gruvbox')
 
 	--keyboard shortcuts--
 	vis:command('map insert <C-s> <Escape>:w<Enter>')
