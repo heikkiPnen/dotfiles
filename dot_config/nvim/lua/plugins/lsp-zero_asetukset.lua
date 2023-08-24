@@ -48,13 +48,13 @@ M.config = function()
   --require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 lsp.ensure_installed({
   -- Replace these with whatever servers you want to install
-  'python-lsp-server',
-  'marksman',
-  'lua-language-server',
-  'bash-language-server',
-  'yaml-language-server',
-  'html-lsp',
-  'json-lsp',
+  --'python-lsp-server',
+  --'marksman',
+  --'lua-language-server',
+  --'bash-language-server',
+  --'yaml-language-server',
+  --'html-lsp',
+  --'json-lsp',
 })
 require'lspconfig'.lua_ls.setup {
   settings = {
