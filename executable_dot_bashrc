@@ -7,8 +7,12 @@ export EDITOR=vis
 export PAGER=less
 export XDG_DATA_HOME=/home/heikki/.local/share
 export ZK_NOTEBOOK_DIR="/home/heikki/Tekstit/md"
-
+# bash
+if [[ $- == *i* ]]; then # in interactive session
+  set -o vi
+fi
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
+
 export FZF_DEFAULT_OPTS="--bind 'alt-e:execute(nvim -f {})'
   --color=bg+:#073642,bg:#002b36,spinner:#719e07,hl:#586e75
   --color=fg:#839496,header:#586e75,info:#cb4b16,pointer:#719e07
