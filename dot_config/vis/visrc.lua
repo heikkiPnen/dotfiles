@@ -1,7 +1,5 @@
 require('vis')
 require('config/vis-plug_asetukset')
-local plug = require('plugins/vis-plug')
-plug.path('/home/heikki/.local/share/vis-plug')
 
 
 vis.events.subscribe(vis.events.INIT, function()
