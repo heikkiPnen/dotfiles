@@ -1,24 +1,7 @@
 require('vis')
-
+require('config/vis-plug_asetukset')
 local plug = require('plugins/vis-plug')
 plug.path('/home/heikki/.local/share/vis-plug')
-
-local plugins = {
-   { 'erf/vis-sneak' },
-   { 'https://git.sr.ht/~mcepl/vis-fzf-open' },
-   { 'https://github.com/roguh.vis-copypasta' },
-   { 'samlwood/vis-gruvbox.git',              theme = true, file = 'gruvbox' },
-   { 'https://github.com/seifferth/vis-editorconfig' },
-}
-
-plug.init(plugins, true)
---plugin_vis_open = require('plugins/vis-fzf-open')
---require('plugins/vis-sneak')
-
--- Path to the fzf executable (default: "fzf")
---plugin_vis_open.fzf_path = (
---    "FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix ' fzf"
---)
 
 
 vis.events.subscribe(vis.events.INIT, function()
@@ -30,4 +13,17 @@ vis.events.subscribe(vis.events.INIT, function()
    vis:command('map insert <C-s> <Escape>:w<Enter>')
    vis:command('map normal <C-s> :w<Enter>')
    vis:command('map! insert <M-C-h> <Escape>dbi')
+end)
+
+vis.events.subscribe(vis.events.WIN_OPEN, function(win)
+    -- Your per window configuration options e.g.
+    vis:command('set autoindent on')
+    vis:command('set colorcolumn 80')
+    vis:command('set cursorline')
+    vis:command('set expandtab on')
+    vis:command('set number')
+    vis:command('set relativenumbers')
+    vis:command('set show-spaces off')
+    vis:command('set show-tabs on')
+    vis:command('set tabwidth 4')
 end)
