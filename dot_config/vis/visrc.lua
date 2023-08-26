@@ -4,10 +4,11 @@ local plug = require('plugins/vis-plug')
 plug.path('/home/heikki/.local/share/vis-plug')
 
 local plugins = {
-  {'erf/vis-sneak'},
-  {'https://git.sr.ht/~mcepl/vis-fzf-open'},
-  {'https://github.com/roguh.vis-copypasta'},
-  {'samlwood/vis-gruvbox.git', theme = true, file = 'gruvbox'}, 
+   { 'erf/vis-sneak' },
+   { 'https://git.sr.ht/~mcepl/vis-fzf-open' },
+   { 'https://github.com/roguh.vis-copypasta' },
+   { 'samlwood/vis-gruvbox.git',              theme = true, file = 'gruvbox' },
+   { 'https://github.com/seifferth/vis-editorconfig' },
 }
 
 plug.init(plugins, true)
@@ -21,12 +22,12 @@ plug.init(plugins, true)
 
 
 vis.events.subscribe(vis.events.INIT, function()
-	--global configuration--
-	vis:command('set change-256colors off') --see vis#613
-  --vis:command('set theme gruvbox')
+   --global configuration--
+   vis:command('set change-256colors off') --see vis#613
+   --vis:command('set theme gruvbox')
 
-	--keyboard shortcuts--
-	vis:command('map insert <C-s> <Escape>:w<Enter>')
-	vis:command('map normal <C-s> :w<Enter>')
-	vis:command('map! insert <M-C-h> <Escape>dbi')
+   --keyboard shortcuts--
+   vis:command('map insert <C-s> <Escape>:w<Enter>')
+   vis:command('map normal <C-s> :w<Enter>')
+   vis:command('map! insert <M-C-h> <Escape>dbi')
 end)
