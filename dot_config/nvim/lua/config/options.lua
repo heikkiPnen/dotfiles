@@ -1,4 +1,7 @@
-
+-- HUOM.
+-- sisennykset yms. säännöt 
+-- .editorconfig -tiedostossa 
+--
 vim.o.cmdheight = 0
 vim.wo.number = true --Show current line number
 vim.wo.relativenumber = true
@@ -6,9 +9,6 @@ vim.wo.relativenumber = true
 vim.o.hlsearch = true  -- Värjää kaikki löydetyt
 vim.o.scrolloff = 4    -- Pitää kursorin poissa ylä/alareunasta
 vim.o.showmode = true
-vim.o.tabstop = 2      -- \t välilyönteinä
-vim.o.softtabstop = 2  -- <tab> tai <backspace> välilyönteinä
-vim.o.shiftwidth = 2   -- sisennys välilyönteinä
 vim.o.expandtab = true -- ei enää \t -merkkejä
 vim.o.hidden = true
 --vim.o.omnifunc = "syntaxcomplete#Complete"
