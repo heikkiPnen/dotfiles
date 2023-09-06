@@ -31,7 +31,7 @@
         shortcut: e
         key: enter
         apply_to: file
-        external: "helix {file}"
+        external: "vis {file}"
         leave_broot: false
     }
 
