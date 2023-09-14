@@ -1,0 +1,30 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+tab_width = 8
+end_of_line = lf
+insert_final_newline = true
+
+[*.{c,h,in,lua}]
+max_line_length = 100
+
+[*.lua]
+indent_size = 3
+
+[*.py]
+indent_size = 4
+
+[*.{js,json,y{a,}ml,html,xml}]
+indent_size = 2
+
+[*.{md,Rmd,rst}]
+trim_trailing_whitespace = false
+
+
+[{Makefile,**/Makefile,runtime/doc/*.txt}]
+indent_style = tab
+indent_size = 8
+
