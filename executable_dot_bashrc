@@ -13,19 +13,19 @@ export HISTCONTROL=erasedups # bash history
 if [[ $- == *i* ]]; then # in interactive session
   set -o vi
 fi
-[ -f ~/.bash_aliases ] && source ~/.bash_aliases
+#
+# Fzf asetukset
+#
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#dcd7ba,bg:-1,hl:#ff9e3b --color=fg+:#c8c093,bg+:,hl+:#98bb6c --color=info:,prompt:#c34043,pointer: --color=marker:,spinner:,header:'
 
-export FZF_DEFAULT_OPTS="--bind 'alt-e:execute(nvim -f {})'
-  --color=bg+:#073642,bg:#002b36,spinner:#719e07,hl:#586e75
-  --color=fg:#839496,header:#586e75,info:#cb4b16,pointer:#719e07
-  --color=marker:#719e07,fg+:#839496,prompt:#719e07,hl+:#719e07"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
 set -o vi
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 eval "$(mcfly init bash)"
 source /home/heikki/.config/broot/launcher/bash/br
-# mcly asetukset
+# mcfly asetukset
 export MCFLY_KEY_SCHEME=vim
 export MCFLY_FUZZY=2
 export MCFLY_RESULTS=50
@@ -34,4 +34,3 @@ export MCFLY_RESULTS=50
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 [[ ${BLE_VERSION-} ]] && ble-attach
-eval "$(mcfly init bash)"
