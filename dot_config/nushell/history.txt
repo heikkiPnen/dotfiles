@@ -1,0 +1,250 @@
+z nu
+cd nushell
+ls
+cp config.nu config.nu_alkup
+sp env.nu env.nu_alkup
+cp env.nu env.nu_alkup
+nvim config.nu
+help upsert
+help use
+sys | get host.sessions.name | each { |it| ^echo $it }
+sys | get host.sessions.name
+[one two three] | to yaml
+[[framework, language]; [Django, Python] [Lavarel, PHP]]
+[{name: 'Robert' age: 34 position: 'Designer'}<\n>     {name: 'Margaret' age: 30 position: 'Software Developer'}<\n>     {name: 'Natalie' age: 50 position: 'Accountant'}<\n>    ] | select name position
+[{name: 'Robert' age: 34 position: 'Designer'}<\n>     {name: 'Margaret' age: 30 position: 'Software Developer'}<\n>     {name: 'Natalie' age: 50 position: 'Accountant'}<\n>    ]
+"acronym,long\nAPL,A Programming Language" | from csv
+help upsert
+ls
+nvim config.nu
+exit
+nv
+help appwnd
+help append
+[{a:b}{c:d}]
+[{a:b},{c:d}]
+z nu
+cd nushell
+ls
+nv config.nu
+[{a:b} {c:d}]
+[{a:{z:1}} {c:d}]
+{x:3 y:1} | insert {z:1}
+{x:3 y:1} | insert z 1
+{x:3 y:1} | insert z {a:1}
+nv config.nu
+touch testi.nu
+nv testi.nu
+help upsert
+nv config.nu
+help export-env
+nv testi.nu
+let zz={'a':1}
+let $zz={'a':1}
+let $zz = {'a':1}
+$zz
+nv testi.nu
+ls
+nv config.nu
+nv testi.nu
+exit
+help upsert
+nv config.nu
+exit
+nv testi.nu
+exit
+nv testi.nu
+exit
+help export-env
+ls
+nv config.nu
+nv testi.nu
+nv
+ls | where size>1kb
+ls | where size > 1kb
+ls | where 
+ps
+sys | table 
+ls **/
+tutorial
+ls
+pwd
+cd nushell
+ls
+helix config.nu
+sudo pacman -S helix
+helix config.nu
+ls subdir
+nvim $path
+$path
+$nu.env-path
+ls
+nv env.nu
+nv config.nu
+exit
+z nu
+ls
+nv testi.nu
+help dirs
+p
+cd
+p
+z nu
+prev
+dexit
+dirs next
+help dir
+help dirs
+n
+p
+z nu
+p
+n
+g
+shells
+n
+ls
+cd ..
+p
+prev
+z nu
+ls
+nv config.nu
+helix config.nu
+ls | sort by type
+ls | sort-by type
+ls | sort-by size
+ls | sort-by size |reverse
+ls | sort-by size | grid -c 
+^ls
+ls
+ls | qml 
+cd p
+prev
+ls
+cd ..
+prev
+help prev
+prev 2
+prev 
+cd
+ls
+cd paru
+prev
+help prev
+prev 1
+use dirs
+prev
+dirs.prev
+dirs prev
+dirs prev 3
+pwd
+z nu
+p
+exit
+shells
+ls
+nv config.nu
+paru
+var
+ls
+mkdir plugins
+./plugins/
+cd ...
+help cd
+cd --
+--
+$OLDPWD
+echo $OLDPWD
+echo $env.OLDPWD
+$env.OLDPWD
+/home/heikki/.config/nushell/plugins
+$env.OLDPWD
+cd $env.OLDPWD
+$env
+nushell
+./nushell/
+ls
+cat testi.nu
+ls | sort-by size | grid -c 
+nv testi.nu
+helix testi.nu
+help each
+env
+eza --icons --tree
+z
+eza --icons --tree
+zi
+z nu
+cd
+fd testdata
+paru
+fd tr-62c18f3c5b901fef.d
+fd tr-62c18f3c5b901fef.*
+fd libform_urlencoded-792308be7fad94dd.rlib
+pwd
+fd -H libform_urlencoded-792308be7fad94dd.rlib
+rm -Rf go
+help rm
+rm -rfp go
+sudo rm -rfp go
+sudo rm -rf go
+eza --icons --tree
+fd testdata
+cd
+pa
+cd paru
+eza --icons --tree
+du .
+dirs
+pushd
+nu-explore
+explore
+z nu
+ls
+start config.nu
+nv config.nu
+ls
+nv testi.nu
+help commands | group-by category
+help commandline
+commandline -a '-l' ls
+commandline -a '-l' 
+nv testi.nu
+help commandline
+nv testi.nu
+help viewers
+help commands | where category =~ viewers
+help explore
+sys | explore<\n>
+ls
+nv testi.nu
+nv env.nu
+help commands | where 
+help commands | group-by category
+help commands | where name=viewers
+help commands | where name = viewers
+help commands | where name ~= viewers
+help commands | where category =~ viewers
+help commands
+help commands | where name =~wrap
+help commands | where name =~ wrap
+help commands | where name =~ zip
+help help
+help --find zi
+help --find view
+help shell
+help shells
+show
+p
+n
+help http
+help http put
+ls
+bat config.nu
+explore config.nu
+help explore
+ls
+config.nu | explore
+help explore
+cd ..
