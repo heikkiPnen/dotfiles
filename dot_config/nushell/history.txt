@@ -248,3 +248,156 @@ ls
 config.nu | explore
 help explore
 cd ..
+chezmoi add nushell
+z chez
+help uutils
+help ls
+help commands | explore
+pwd
+update
+uptime
+help shells
+help shells show
+help shells |show
+help shells
+help dirs
+help shells
+sys
+sys |get cpu
+sys |get cpu brand
+sys |get cpu.brand
+sys | get host.sessions.name | each { |it| ^echo $it }
+ls
+z nu
+ls
+nv testi.nu
+help --find view
+enter
+shells
+enter ~
+shells
+n
+p
+shells
+help dirs
+g1
+g 1
+g 0
+dexit
+z nu
+enter ~
+shells
+help dirs
+g
+nv
+g
+ls
+g1
+g 1
+g 0
+br
+broot
+b1
+dexit
+pwd
+z nu
+nv
+help fg
+nv
+enter .
+g
+nv
+dexit
+enter ~
+g
+help shells
+shells show
+help shell
+help dirs
+help shells
+help show
+show -h
+use dirs
+show -h
+dirs show
+g
+> date now | date to-timezone "Europe/London"
+date now | date to-timezone "Europe/London"
+date now | date to-timezone "Finland/Helsinki"
+date now | date to-timezone "Europe/Helsinki"
+{'name': 'nu', 'stars': 5, 'language': 'Python'} | upsert language 'Rust'
+[one two three] | to yaml<\n>
+z = [one two three] | to yaml<\n>
+let z = [one two three] | to yaml<\n>
+$z
+let planets = [Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune]
+$planets | each { |it| $"($it) is a planet of solar system" }
+let scores = [3 8 4]
+$"total = ($scores | reduce { |it, acc| $acc + $it })"
+let cond = {|x| $x < 0 }; [-1 -2 9 1] | take while $cond
+$cond
+help watch
+let x=1
+let x = 1
+x = 2
+$x = 2
+$x += 2
+let files = (ls)
+ls
+$files.0
+$files.1
+$files.5
+$files.6
+$files
+$files.6.type
+$"1+1"
+zz = $"1+1"
+let zz = $"1+1"
+$zz
+$"luku ($zz)"
+date
+date now | date to-timezone "Europe/Helsinki"
+0b[1 1010]
+{name: sam, rank: 10}
+{name: sam, rank: 10} | transpose key value
+{name: sam, rank: 10 } | transpose key value
+{name: sam, rank: 10 name: heikki rank: 10} | transpose key value
+{name: sam, rank: 10 nxame: heikki rankx: 10} | transpose key value
+let greet = { |name| print $"Hello ($name)"}
+do $greet
+do $greet "Julian"
+z nu
+ls
+open config.nu
+cd
+ls
+cd Pictures/
+ls
+cd
+cd Downloads/
+ls
+open `501188.jpg`
+starship init nu
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+z nu
+ls
+$nu.config-path
+nv config.nu
+cd
+z muistilaput
+cd
+ls
+cd tmp
+pwd
+ls
+fd tmp
+fd -t d
+fd -t d tmp
+fd -t d temp
+fd *py
+fd *.py
+z chez
+git pull
+z nu
+cd ..
