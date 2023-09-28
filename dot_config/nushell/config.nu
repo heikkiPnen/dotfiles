@@ -771,3 +771,5 @@ use ~/.config/nushell/testi.nu
 alias nv = nvim
 source ~/.zoxide.nu
 use ~/.cache/starship/init.nu
+
+source /home/heikki/.config/broot/launcher/nushell/br

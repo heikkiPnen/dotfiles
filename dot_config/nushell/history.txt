@@ -401,3 +401,12 @@ z chez
 git pull
 z nu
 cd ..
+starship init nu | save -f ~/.cache/starship/init.nu
+nv
+z chezmoi
+git pull
+broot --install
+cd ..
+git add broot fish nushell 
+z .conf
+git add broot fish nushell 
