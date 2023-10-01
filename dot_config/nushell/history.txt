@@ -410,3 +410,417 @@ cd ..
 git add broot fish nushell 
 z .conf
 git add broot fish nushell 
+chezmoi update
+nv
+z muistilaput
+ls
+cd plugin/
+ls
+nv muistilaput.vim
+nv
+ls
+cd -
+ls
+cd lua
+ls
+nv muistilaput.lua
+cd ..
+git pull
+cd lua
+ls
+nv
+cd ..
+ls
+cd plugin
+ls
+nv muistilaput.vim
+nv
+cd lua
+ls
+cd ..
+cd kua
+pwd
+ls
+cd lua
+ls
+nv muistilaput.lua
+nv 
+ls
+nv muistilaput.lua
+z nu
+ls
+nv history.txt
+nv nu_table.md
+cat nu_table.md
+nv nu_table.md
+z muistilaput
+ls
+ls -a
+git pull
+ls -a
+git pull
+ls
+nv nu_table.md
+nv
+nv xx.md
+z plugins
+ls
+nv lsp-zero_asetukset.lua
+nv nvim-cmp_asetukset.lua
+cd -
+nv xx.md
+ls
+z ftplugin/
+ls
+nv markdown.lua
+cd ..
+ls
+nv xx.md
+nv ftplugin/markdown.lua
+nv xx.md
+nv ftplugin/markdown.lua
+cd ..
+rm -Rf muistilaput
+help rm
+ls
+z nu
+ls
+nv config.nu
+nv
+z plugins
+ls
+zi plugins
+ls
+ls ..
+ls ../eikäytössä/
+ls ../eikäytössä/ | where size>110KB
+ls ../eikäytössä/ | where size > 110KB
+ls ../eikäytössä/ | where size > 1KB
+ls
+ls ../eikäytössä/ 
+bat ../eikäytössä/nu_lsp.lua
+cp ../eikäytössä/nu_lsp.lua .
+ls
+nv
+ls
+z nu
+ls
+nv config.nu
+nv
+zi plugins/
+zi plugin
+nv nu_lsp.lua
+ls
+nv paketteja_asetukset.lua
+nv nu_lsp.lua
+nv
+cd -
+ls
+z nu
+nv nu_table.md
+ls
+nv config.nu
+zi plugins
+vis nu_lsp.lua
+nv nu_lsp.lua
+enter ~/.config/nushell/
+ls
+nv config.nu
+g
+g1
+g 1
+g 0
+nv nu_lsp.lua
+p
+man kill
+n
+p
+ls
+nv config.nu
+p
+cd ..
+ls
+cd ..
+nv init.lua
+rg mapleader
+nv init.lua lua/config/mappings.lua
+nv
+g
+g 1
+ls
+nv config.nu
+p
+ls
+nv nu_lsp.lua
+checkupdates
+g
+pwd
+enter ~/.config/nushell/
+g
+enter ~/.config/nvim/
+zi plugins
+g
+nv nu_lsp.lua
+g 1
+nv config.nu
+pacman -Ss carapace
+paru -Ss carapace
+nv config.nu
+paru -Ss carapace
+paru -Ss carapace-bin
+paru -S carapace-bin
+paru -Rns carapace-bin
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+z nu
+nv config.nu
+ls | sort-by 
+cd
+sudo pacman -Syu
+z muist
+git add .
+git commit -m "muutos"
+ls | sort-by name
+ls | sort-by size
+sudo pacman -S atuin
+atuin import bash
+atuin import auto
+which nu
+zoxide query --interactive
+pwd
+zi plugins
+ls
+z nu
+ls
+nv config.nu
+fzf
+nv fo.nu
+^explore 
+nv fo.nu
+ls
+chmod a+x fo.nu 
+./fo.nu 
+nv fo.nu
+fzf --height 60% --layout reverse --border | str trim
+ls (fzf --height 60% --layout reverse --border | str trim)
+nv (fzf --height 60% --layout reverse --border | str trim)
+nv (fzf --height 60% --layout reverse --border --preview | str trim)
+nv |fzf --height 60% --layout reverse --border --preview | str trim
+help preview
+sudo pacman -Rns atuin
+ls
+z nu
+ls
+open testi.nu
+ls
+nv config.nu
+bat config.nu
+nv ~/.cache/carapace/init.nu
+sys
+sys | get host
+sys | get host |select sessions
+sys | get host |select sessions |select name
+sys | get host |select sessions
+help commands
+ls
+nv nu_table.md
+nv nu_table.md | names
+nv nu_table.md
+ls
+z nu
+ls
+bau nu_table.md
+bat nu_table.md
+ls -l
+ls -l |names
+ls -l | columns
+ls -l | columns.0
+ls -l | columns
+ls -l | columns | get 0
+ls -l | columns | get 1
+help commands
+path
+ls -l | columns | split
+ls -l | columns
+ls -l | rows
+dexit
+exit
+checkupdates
+z
+z nu
+nv nu_table.md
+ls |1
+ls
+nv nu_table.md
+ls
+ls | where name =~ fo
+nv nu_table.md
+ls | where name =~ fo |split row
+ls | where name =~ fo | split row
+nv nu_table.md
+ls | where name =~ fo | explore
+ls | explore
+ls | where name =~ fo 
+open nu_table.md
+tldr rg
+man rg
+z
+rg -c Pyörä
+rg -c Pyörä| lines | split column ":"
+rg -c Pyörä| lines | split column ":" nimi lkm
+rg -c Pyörä| lines | split column ":" nimi lkm|0
+rg -c Pyörä| lines | split column ":" nimi lkm | 1
+rg -c Pyörä| lines | split column ":" nimi lkm 
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-bi lkm
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm
+help lines
+help list
+help table
+ls | get name
+ls | get name.24
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm|get name
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm|get nimi
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm|get nimi.0
+z nu
+ls
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm|get nimi
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm|get nimi.last
+rg -c Pyörä| lines | split column ":" nimi lkm | sort-by lkm
+nv history.txt
+nv nu_table.md
+help literals
+help literal
+help
+help -l
+help -h
+help --find grep
+help table
+help
+help help
+help -f completion
+ls
+nv config.nu
+nv testi.nu
+nv config.nu
+ls fo.nu
+nv config.nu
+nv ~/.cache/carapace/init.nu
+man carapace
+help carapace
+paru -Ss carapace-bin
+fzf 
+nv ~/.cache/carapace/init.nu
+ls
+nv ~/.cache/carapace/init.nu
+cd ../carapace/
+ls
+cd -
+paru -Ql carapace-bin
+carapace
+carapace _carapace nushell<\n>
+carapace --list
+carapace --run fzf
+carapace --run visudo 
+carapace _carapace nushell
+ls -l env.nu 
+ls
+cat nu_table.md 
+nv config.nu
+ru -Ss atuin
+paru -Ss atuin
+paru -S atuin
+atuin import auto
+atuin import fish
+paru -Ss atuin-bin
+paru -Rns atuin
+atuin
+nv config.nu
+mkdir ~/.local/share/atuin
+$env.ATUIN_NOBIND = true
+atuin init nu | save -f ~/.local/share/atuin/init.nu #make sure you created the directory beforehand with `mkdir ~/.local/share/atuin/init.nu`
+atuin init nu | save -f ~/.local/share/atuin/init.nu
+nv config.nu
+atuin init nu | save -f ~/.local/share/atuin/init.nu
+help if
+help isfile
+help file
+help 
+help commands
+help commands|select category == core
+help commands|select category
+help commands|select category == core
+help commands
+'/home/joe/todo.txt' | path exists
+exit
+ls
+z ~/.config/atuin/
+ls
+nv config.toml
+z nu
+nv config.nu
+br
+atuin init nu --disable-up-arrow | save -f ~/.local/share/atuin/init.nu
+pwd
+nv config.nu
+ls
+nv config.toml
+z nu
+nv config.nu
+z nu
+nv config.nu
+z nu
+nv config.nu
+z atuin
+ls
+nv config.toml
+z nu
+nv config.toml
+z nu
+nv config.toml
+pwd
+z
+z nu
+nv config.nu
+z atuin
+ös
+ls
+nv config.toml
+z nu
+nv config.toml
+ls
+nv config.nu
+nvim config.nu
+nv config.nu
+z nu
+nv config.nu
+ls
+nv configuration.nix
+z nu
+nv config.nu
+ls
+ls plugins/
+mkdir init
+nv config.nu
+ls init/
+ls
+cp ~/.cache/carapace/init.nu init/carapace_init.nu
+ls init/
+cp ~/.cache/starship/init.nu ./init/starship_init.nu
+exit
+cp ~/.zoxide.nu ./init/zoxide_init.nu
+z
+cd -
+cat config.nu 
+rm -rf ~/.cache/carapace
+rm -rf ~/.cache/starship
+rm ~/.zoxide.nu
+nv config.nu
+ls init/
+cd init
+touch LUEMUT
+nv LUEMUT
+cd..
+cd ..
+ls carapace/
+ls carapace/atuin
+ls atuin
