@@ -10,7 +10,11 @@ if status is-interactive
     set fzf_directory_opts --bind "ctrl-o:execute(nvim {} &> /dev/tty)"
     set fzf_preview_dir_cmd eza --all --color=always
     fzf_configure_bindings --history=\ch  # c-r on varattu mcfly:lle
-    mcfly init fish | source
-
+    #mcfly init fish | source
+    set -gx ATUIN_NOBIND "true"
+    atuin init fish --disable-up-arrow | source
+    # bind to ctrl-r in normal and insert mode, add any other bindings you want here too
+    bind \cr _atuin_search
+    bind -M insert \cr _atuin_search
 end
 
