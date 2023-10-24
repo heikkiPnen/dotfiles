@@ -1,0 +1,17 @@
+
+layout {
+
+swap_tiled_layout name="h2v" {
+        tab max_panes=2 {
+            pane command="nu"
+            pane
+        }
+        tab {
+            pane split_direction="vertical" {
+                pane
+                pane
+                pane
+            }
+        }
+    }
+}

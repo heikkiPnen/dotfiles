@@ -1,0 +1,59 @@
+
+tab_template name="ui" {
+  pane size=1 borderless=true {
+    plugin location="zellij:tab-bar"
+  }
+  children
+  pane size=2 borderless=true {
+      plugin location="zellij:status-bar"
+  }
+}
+swap_tiled_layout name="t1" {
+  ui  split_direction="vertical" max_panes=4 {
+    pane
+  //pane  {
+  //      pane
+  //      pane
+  //  }
+  }
+}
+swap_tiled_layout name="t2" {
+  ui  split_direction="horizontal" {
+    pane
+    pane
+   
+  }
+}
+swap_floating_layout name="K1" {
+    floating_panes max_panes=10 {
+        pane { x "5%"; y 1; width "90%"; height "90%"; }
+        pane { x "5%"; y 2; width "90%"; height "90%"; }
+        pane { x "5%"; y 3; width "90%"; height "90%"; }
+        pane { x "5%"; y 4; width "90%"; height "90%"; }
+        pane { x "5%"; y 5; width "90%"; height "90%"; }
+        pane { x "5%"; y 6; width "90%"; height "90%"; }
+        pane { x "5%"; y 7; width "90%"; height "90%"; }
+        pane { x "5%"; y 8; width "90%"; height "90%"; }
+        pane { x "5%"; y 9; width "90%"; height "90%"; }
+        pane focus=true { x 10; y 10; width "90%"; height "90%"; }
+    }
+}
+
+//swap_tiled_layout name="Jaettu" {
+//  // tab-bar ja status-bar täytyy laskea mukaan
+//  ui exact_panes=4 {
+//    pane 
+//  }
+//  ui max_panes=5 {
+//    pane split_direction="vertical" {
+//      pane
+//      pane
+//    }
+//  }
+//}
+//
+//swap_tiled_layout name="Jaettu2" {
+//ui {
+//    pane
+//  }
+//}
