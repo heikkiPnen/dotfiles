@@ -824,3 +824,300 @@ cd ..
 ls carapace/
 ls carapace/atuin
 ls atuin
+chezmoi apply
+ls ~/.local/share/atuin/
+z nu
+ls
+nv config.nu
+ls
+ls | enumerate | each { |it| $"Number ($it.index) is size ($it.item.size)" }
+cd
+exit
+pwd
+cd var/ansible/
+cd -
+cd v/an
+cd var/ansible/
+exit
+enter ../nvim
+enter ../ansible_alkup/
+shells
+enter ~
+shells
+p
+g 0
+sudo pacman -S btop
+btop
+"one,two,three" | split row ","
+let planets = [Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune]
+$planets | each { |it| $"($it) is a planet of solar system" }
+$planets | enumerate | each { |it| $"($it.index + 1) - ($it.item)" }
+let scores = [3 8 4]
+$"total = ($scores | reduce { |it, acc| $acc + $it })"
+exit
+ls
+(ls)
+^ls
+(^ls)
+(ls).name
+ls -l
+date humanize
+date now
+date now|humanize
+date now| date humanize
+mut x = 0; while $x < 10 { $x = $x + 1 }
+[1 2 3 2] | each {|z| if $z == 2 { "two" } }
+[1 2 3 2] | each {|z| if $z > 2 { "two" } }
+help each
+ls | get
+ls | columns
+ls -a | columns
+ls -a
+ls -l
+ls -l| columns
+z zettel
+ls
+ls -l| columns
+ls -l|sort-by accessed |select name created accessed
+ls -l|sort-by accessed | reverse| select name created accessed
+ls -l| columns
+help columns
+columns
+help help
+help closure
+help help
+help -f closure
+help
+help commands
+help commands | columns
+[sam fred george]
+[sam {fred:2} george]
+[sam {fred:2} george].1
+checkupdates
+sudo pacman -Syu
+paru -Syu
+eza
+eza --icons --tree
+^eza --icons --tree
+^eza
+cd
+ls
+z nushell
+ls
+nv config.nu
+$nu.env-path
+ls
+nv env.nu
+ls
+ls plugins/
+$env
+$env.atuin
+$env.keybindings.atuin
+cd
+nv .bashrc
+$env.EDITOR
+z nushell
+ls
+nv config.nu
+z nushell
+ls
+mkdir scripts
+nv env.nu
+nv config.nu
+ls
+ls init/
+nv init/LUEMUT
+rg init
+ls
+cd scripts/
+nv testi.nu
+source testi.nu
+nv testi.nu
+nv testi.nu asd
+source testi.nu asd
+nv testi.nu
+greet qwe
+greet
+ls
+nu testi.nu 
+greet qwe
+greet
+source testi.nu 
+greet
+greet qwe
+cd ..
+ls
+nv config.nu
+help rm
+nv config.nu
+ls
+nv testi.nu
+help Core
+config nu
+nv
+greet "qw"
+z nushell
+ls
+cd scripts/
+ls
+nu testi.nu 
+greet "qw"
+source testi.nu 
+greet "qw"
+help source
+$nu.config-path
+help use
+help $
+help 
+checkupdates
+cd ..
+ls
+nv config.nu
+ls -l| columns
+mv -
+nv config.nu
+z nushell
+nv config.nu
+pacman -Ss carapace
+paru -Ss carapace
+ls ~/.cache/carapace
+nv config.nu
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+nv config.nu
+ls
+ls --help 
+rg --
+help braces
+help dollar
+help -f
+help -f core
+z nushell
+ls
+cd plugins
+ls
+cd ..
+ls
+ls init/
+atuin init nu | save ~/.local/share/atuin/init.nu
+rm -rf ~/.local/share/atuin
+atuin init nu | save ~/.local/share/atuin/init.nu
+starship init nu | save -f ~/.cache/starship/init.nu
+ls
+ls init/
+rm init/starship_init.nu
+pwd
+rm --trash init/starship_init.nu
+nv init/zoxide_init.nu
+nv /home/heikki/.local/share/broot/launcher/nushell/4
+nv /home/heikki/.config/nushell/init/zoxide_init.nu
+nv init/LUEMUT
+nv config.nu
+help rm
+ls
+open config.nu
+open config.nu | get version
+nv config.nu
+open config.nu | get dark_theme.bool
+firefox
+ls
+zellij
+use ./themes/gruvbox-material-dark-medium.nu
+$env.config = ($env.config | merge {color_config: (theme)})
+ls themes
+$env.config = ($env.config | merge {color_config: (gruvbox-material-dark-medium.nu)})
+nv config.nu
+nvim config.nu
+use ./themes/gruvbox-material-dark-medium.nu
+$env.config = ($env.config | merge {color_config: (gruvbox-material-dark-medium.nu)})
+$env.config = ($env.config | merge {color_config: (themes/gruvbox-material-dark-medium.nu)})
+nv themes/gruvbox-material-dark-medium.nu
+nv config.nu
+nv themes/gruvbox-material-dark-medium.nu
+chmod a+x themes/gruvbox-material-dark-medium.nu 
+use ./themes/gruvbox-material-dark-medium.nu
+$env.config = ($env.config | merge {color_config: (themes/gruvbox-material-dark-medium.nu)})
+$env.config = ($env.config | merge {color_config: (themes/gruvbox-material-dark-medium)})
+$env.config = ($env.config | merge {color_config: (themes/gruvbox-material-dark-medium.nu)})
+rm ./themes/gruvbox-material-dark-medium.nu
+^rm ./themes/gruvbox-material-dark-medium.nu
+cp ~/Downloads/grass.nu themes/
+use ./themes/grass.nu
+$env.config = ($env.config | merge {color_config: (themes/grass.nu)})
+chmod a+x themes/grass.nu 
+$env.config = ($env.config | merge {color_config: (themes/grass.nu)})
+nv config.nu config.nu_alkup
+nvim config.nu
+ls
+paru -Ss nupm
+paru -Ss nushell
+nupm
+pacman -Ql nshell
+paru -Ql nshell
+paru -Ql nushell
+ls themes
+cd themse
+cd themes
+use grass.nu 
+$env.config = ($env.config | merge {color_config: (grass)})
+cp ~/Downloads/gruvbox-material-dark-medium.nu .
+use gruvbox-material-dark-medium.nu 
+$env.config = ($env.config | merge {color_config: (gruvbox-material-dark-medium })
+$env.config = ($env.config | merge {color_config: (gruvbox-material-dark-medium) })
+ls
+nvim config.nu
+ls
+nv gruvbox-material-dark-medium.nu
+ls
+ls | select name size | select 3..
+ls | select name size 
+ls | select name size | sort_by size
+ls | select name size | sort size
+help sort
+ls
+help sort_by
+help commands
+help commands | select sort
+ls | select name size | sort-by size
+ls | select name | sort-by size
+help | where category == core
+help
+help commands | where category == core
+$'(ansi purple_bold)This text is a bold purple!(ansi reset)'
+$'(ansi red)This text is a bold purple!(ansi reset)'
+help category
+help version
+help help
+nv config.nu
+help eval
+open config.nu
+bat config.nu
+pacman -Ss bat
+paru -Ss bat
+help commands
+[help commands].100
+[help commands].1
+[help commands].0
+export alias xa = eza --icons --all
+xa
+eza --icons --tree
+help columns
+ls | columns
+help columns
+bat Tekstit/md/Zettelkasten/KDE_20211205.md 
+ks
+ls
+git pull
+ls
+atuin history -c .<\n>
+nv /home/heikki/.local/share/broot/launche
+z fish
+ls
+z conf.d/
+ls
+nv atuin.fish
+nv atuin.fish ../config.fish
+z nushell
+ls
+nv config.nu
+nv ~/.local/share/atuin/init.nu
