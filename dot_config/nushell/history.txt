@@ -1121,3 +1121,9 @@ z nushell
 ls
 nv config.nu
 nv ~/.local/share/atuin/init.nu
+br
+grub-install 
+ls ~
+ls
+nv config.kdl
+zellij
