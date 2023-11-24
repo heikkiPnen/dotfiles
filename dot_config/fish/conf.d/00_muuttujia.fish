@@ -9,7 +9,7 @@ if status is-interactive
     # fzf.fish plugin:
     set fzf_directory_opts --bind "ctrl-o:execute(nvim {} &> /dev/tty)"
     set fzf_preview_dir_cmd eza --all --color=always
-    fzf_configure_bindings --history=\ch  # c-r on varattu mcfly:lle
+    #fzf_configure_bindings --history=\ch  # c-r on varattu mcfly:lle
     #mcfly init fish | source
 end
 
