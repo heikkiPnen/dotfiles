@@ -1,0 +1,39 @@
+
+// Templates 
+tab_template name="ui" {
+   pane size=1 borderless=true {
+       plugin location="zellij:tab-bar"
+   }
+   children
+   pane size=2 borderless=true {
+       plugin location="zellij:status-bar"
+   }
+}
+
+swap_tiled_layout name="pino1" {
+  ui max_panes=4 {
+    pane split_direction="vertical" {
+      pane
+      pane split_direction="horizontal" {
+          pane
+          pane    
+      }
+    }
+  }
+}
+swap_tiled_layout name="pino2" {
+  ui min_panes=5 {
+    pane split_direction="vertical" {
+      pane
+      pane stacked=true split_direction="horizontal" {
+          pane
+          pane
+          pane
+      }
+    }
+  }
+}
+  
+       
+    
+
