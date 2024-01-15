@@ -10,23 +10,14 @@ tab_template name="ui" {
   }
 }
   
-swap_tiled_layout name="pysty" {
+swap_tiled_layout name="pino" {
   ui max_panes=5 {
     pane split_direction="vertical" {
       pane
-      pane { children; }
+      pane {children;}
     }
   }
 
-  ui max_panes=8 {
-    pane split_direction="horizontal" {
-      pane 
-    }
-  }
-}
- 
-
-swap_tiled_layout name="pino" {
   ui max_panes=8 {
     pane split_direction="vertical" {
       pane
@@ -38,6 +29,7 @@ swap_tiled_layout name="pino" {
     }
   }
 }
+  
        
     
 
