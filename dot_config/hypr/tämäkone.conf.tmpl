@@ -1,0 +1,8 @@
+
+{{ if eq .chezmoi.hostname "haapa" }}
+monitor=DP-1,preferred,auto,auto
+
+{{ else if eq .chezmoi.hostname "kaisla" }}
+monitor=eDP-1,preferred,auto,auto
+
+{{ end }}
