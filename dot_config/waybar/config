@@ -4,12 +4,12 @@
     "mod": "dock",
 
 
-    "modules-left": ["wlr/workspaces"],
+    "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "tray", "battery", "clock"],
 
     
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
       "format": "{name}",
       "on-click": "activate",
     },
