@@ -44,6 +44,11 @@ window {
   background-color: #2B3328;
 }
 
+#network {
+  margin:     0px 3px 0px 1px;
+  min-width:  40px;
+  background-color: #2B3328;
+}
 #clock {
         margin:     0px 16px 0px 10px;
         min-width:  10px;
