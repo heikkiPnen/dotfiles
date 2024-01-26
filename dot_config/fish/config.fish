@@ -8,6 +8,6 @@ if status is-interactive
 #    set fzf_preview_dir_cmd eza --all --color=always
 #    fzf_configure_bindings --history=\ch  # c-r on varattu mcfly:lle
 #    #mcfly init fish | source
-    atuin init fish | source
+    atuin init fish --disable-up-arrow | source
 end
 
