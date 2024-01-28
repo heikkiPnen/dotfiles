@@ -1,13 +1,12 @@
 {
-"layer": "top",
+    "layer": "top",
     "position": "top",
-    "mod": "dock",
+    "height": 35,
+    "mode": "dock",
 
-
-    "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
+    "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "tray", "battery", "clock"],
-
+    "modules-right": ["pulseaudio", "tray", "battery", "network", "clock", "custom/power"],
     
     "hyprland/workspaces": {
       "format": "{name}",
@@ -19,7 +18,7 @@
     },
 
     "tray": {
-      "icon-size": 13,
+      "icon-size": 21,
       "spacing": 10
     },
 
@@ -56,5 +55,22 @@
         "car": "",
         "default": ["", "", ""]
     },
+    },
+    "network": {
+    "interface": "wlp2s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+},
+    "custom/power": {
+        "format": " ⏻ ",
+        "tooltip": false,
+        "on-click": "wlogout --protocol layer-shell"
     },
 }
