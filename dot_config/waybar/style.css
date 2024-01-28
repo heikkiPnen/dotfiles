@@ -1,7 +1,7 @@
 * {
         border:        none;
         border-radius: 0;
-        font-family:   "font awesome", "JetBrains Mono", "Hack Nerd Font";
+        font-family:   "Maple Mono NF", "JetBrains Mono", "Hack Nerd Font";
         font-size:     20px;
         box-shadow:    none;
         text-shadow:   none;
@@ -41,6 +41,7 @@ window {
 #pulseaudio {
   margin:     0px 3px 0px 1px;
   min-width:  80px;
+  color: #C8C093;
   background-color: #2B3328;
 }
 
@@ -54,8 +55,9 @@ window {
   background-color: #54546d;
 }
 #clock {
+    /*
         margin:     0px 16px 0px 10px;
-        min-width:  10px;
+    */
 }
 
 #custom-power {
