@@ -14,7 +14,7 @@
     },
 
     "hyprland/window": {
-      "format": "{}"
+      "format": "{title}"
     },
 
     "tray": {
