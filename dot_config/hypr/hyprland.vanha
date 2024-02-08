@@ -1,150 +1,203 @@
-# Näyttö
-# 3840x2160@60
-monitor=,preferred,auto,2
-workspace=DP-1,1
+#
+# See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
+# Execute your favorite apps at launch
+# exec-once = waybar & hyprpaper & firefox
+
+# Source a file (multi-file configs)
+# source = ~/.config/hypr/myColors.conf
+
+# For all categories, see https://wiki.hyprland.org/Configuring/Variables/
 input {
-    kb_file=
-    kb_layout=fi
-    kb_variant=
-    kb_model=
-    kb_options=
-    kb_rules=
+    kb_layout = fi
+    kb_variant =
+    kb_model =
+    kb_options =
+    kb_rules =
 
-    follow_mouse=1
+    follow_mouse = 1
 
     touchpad {
-        natural_scroll=no
+        natural_scroll = no
     }
 
-    sensitivity=0 # -1.0 - 1.0, 0 means no modification.
+    sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
 }
+env = XCURSOR_SIZE,24
+env = QT_QPA_PLATFORMTHEME,qt6ct
 
 general {
-    main_mod=SUPER
-    #layout=master
-    #layout=dwindle
-    gaps_in=5
-    gaps_out=20
-    border_size=2
-    col.active_border=0x66ee1111
-    col.inactive_border=0x66333333
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-    apply_sens_to_raw=0 # whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
-
-    #damage_tracking=full # leave it on full unless you hate your GPU and want to make it suffer
+    gaps_in = 5
+    gaps_out = 20
+    border_size = 4
+    #col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+    #col.inactive_border = rgba(595959aa)
+  #gaps_in=15
+  #gaps_out=15
+  #border_size=2
+    col.active_border=0xff7e9cd8
+    col.inactive_border=0xff54546d
+    apply_sens_to_raw=0 
+    #col.group_border=0xff54546d
+    #col.group_border_active=0xff957fb8
+    
+    layout = dwindle
+    #layout = master
 }
 
 decoration {
-    rounding=5
-    blur=1
-    blur_size=3 # minimum 1
-    blur_passes=1 # minimum 1
-    blur_new_optimizations=1
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+
+# Allaolevista hypr valitti
+
+    rounding = 5
+    blur {
+        size = 3
+        passes = 1
+        new_optimizations = on
+    }
+    drop_shadow = yes
+    shadow_range = 4
+    shadow_render_power = 3
+    col.shadow = rgba(1a1a1aee)
+
+    inactive_opacity = 0.9
+    dim_inactive=true
+    dim_strength=0.2
 }
 
 animations {
-    enabled=1
-    animation=windows,1,7,default
-    animation=border,1,10,default
-    animation=fade,1,10,default
-    animation=workspaces,1,6,default
+    enabled = yes
+
+    # Some default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
+
+    bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+
+    animation = windows, 1, 7, myBezier
+    animation = windowsOut, 1, 7, default, popin 80%
+    animation = border, 1, 10, default
+    animation = borderangle, 1, 8, default
+    animation = fade, 1, 7, default
+    animation = workspaces, 1, 6, default
 }
 
 dwindle {
-    pseudotile=0 # enable pseudotiling on dwindle
+    # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+    pseudotile = yes # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+    preserve_split = yes # you probably want this
+}
 
+master {
+    # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
+    new_is_master = true
 }
 
 gestures {
-    workspace_swipe=no
+    # See https://wiki.hyprland.org/Configuring/Variables/ for more
+    workspace_swipe = off
 }
 
-# example window rules
-# for windows named/classed as abc and xyz
-#windowrule=move 69 420,abc
-#windowrule=size 420 69,abc
-#windowrule=tile,xyz
-#windowrule=float,abc
-#windowrule=pseudo,abc
-#windowrule=monitor 0,xyz
+# Example per-device config
+# See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
+device:epic mouse V1 {
+    sensitivity = -0.5
+}
 
-#windowrule = float,^(firefox)$
+# Example windowrule v1
+# windowrule = float, ^(kitty)$
+# Example windowrule v2
+# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
+# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
-# example binds
-bind=ALT,space,exec,fuzzel
-bind=SUPERSHIFT,E,exit,
-bind=SUPER,K,exec,konsole
-bind=SUPER,return,exec,foot
-bind=SUPER,C,killactive,
-#bind=SUPER,Q,exit,
-bind=SUPER,E,exec,dolphin
-bind=SUPER,F,togglefloating,
+# See https://wiki.hyprland.org/Configuring/Keywords/ for more
+$mainMod = SUPER
 
-#pseudo - keeps the floating size (and aspect ratio) of windows when tiled
-bind=SUPER,P,pseudo,
+  # Example binds, see https://wiki.hyprland>.org/Configuring/Binds/ for more
+bind = $mainMod, return, exec, foot
+bind = $mainMod, K, exec, konsole
+bind = $mainMod, F, exec, firefox
+#bind = $mainMod, C, killactive, 
+bind = CONTROLSHIFT, Q, killactive, 
+bind = $mainMod SHIFT, E, exit, 
+bind = $mainMod, V, togglefloating
+bind=  ALT, space, exec, krunner
+bind = $mainMod, R, exec, anyrun
+bind = $mainMod, P, pseudo, # dwindle
+bind = $mainMod, J, togglesplit, # dwindle
+bind = $mainMod SHIFT, F, fullscreen,0
 
-# Group = Tab
-bind=SUPERSHIFT,G,togglegroup,
-bind=SUPERSHIFT,F,changegroupactive,f
-bind=SUPERSHIFT,B,changegroupactive,b
+# Move focus with mainMod + arrow keys
+bind = $mainMod, left, movefocus, l
+bind = $mainMod, right, movefocus, r
+bind = $mainMod, up, movefocus, u
+bind = $mainMod, down, movefocus, d
 
-bind=SUPER,left,movefocus,l
-bind=SUPER,right,movefocus,r
-bind=SUPER,up,movefocus,u
-bind=SUPER,down,movefocus,d
+# siirrä ikkunoita
+bind=$mainMod SHIFT,left,movewindow,l
+bind=$mainMod SHIFT,right,movewindow,r
+bind=$mainMod SHIFT,up,movewindow,u
+bind=$mainMod SHIFT,down,movewindow,d
 
+# vaihda ikkunoita
+bind=CONTROLSHIFT,left,movewindow,l
+bind=CONTROLSHIFT,right,movewindow,r
+bind=CONTROLSHIFT,up,movewindow,u
+bind=CONTROLSHIFT,down,movewindow,d
 
-bind=SUPERSHIFT,left,movewindow,l
-bind=SUPERSHIFT,right,movewindow,20
-bind=SUPERSHIFT,up,movewindow,u
-bind=SUPERSHIFT,down,movewindow,d
+# seuraava työtilq
+bind=CONTROLSUPER,left,workspace,-1
+bind=CONTROLSUPER,right,workspace,+1
 
-bind=SUPER,1,workspace,1
-bind=SUPER,2,workspace,2
-bind=SUPER,3,workspace,3
-bind=SUPER,4,workspace,4
-bind=SUPER,5,workspace,5
-bind=SUPER,6,workspace,6
-bind=SUPER,7,workspace,7
-bind=SUPER,8,workspace,8
-bind=SUPER,9,workspace,9
-bind=SUPER,0,workspace,10
+# Switch workspaces with mainMod + [0-9]
+bind = $mainMod, 1, workspace, 1
+bind = $mainMod, 2, workspace, 2
+bind = $mainMod, 3, workspace, 3
+bind = $mainMod, 4, workspace, 4
+bind = $mainMod, 5, workspace, 5
+bind = $mainMod, 6, workspace, 6
+bind = $mainMod, 7, workspace, 7
+bind = $mainMod, 8, workspace, 8
+bind = $mainMod, 9, workspace, 9
+bind = $mainMod, 0, workspace, 10
 
-bind=ALT,1,movetoworkspace,1
-bind=ALT,2,movetoworkspace,2
-bind=ALT,3,movetoworkspace,3
-bind=ALT,4,movetoworkspace,4
-bind=ALT,5,movetoworkspace,5
-bind=ALT,6,movetoworkspace,6
-bind=ALT,7,movetoworkspace,7
-bind=ALT,8,movetoworkspace,8
-bind=ALT,9,movetoworkspace,9
-bind=ALT,0,movetoworkspace,10
+# Move active window to a workspace with mainMod + SHIFT + [0-9]
+bind = $mainMod SHIFT, 1, movetoworkspace, 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5
+bind = $mainMod SHIFT, 6, movetoworkspace, 6
+bind = $mainMod SHIFT, 7, movetoworkspace, 7
+bind = $mainMod SHIFT, 8, movetoworkspace, 8
+bind = $mainMod SHIFT, 9, movetoworkspace, 9
+bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
-bind=SUPERALT,right,resizeactive,10 0
-bind=SUPERALT,left,resizeactive,-10 0
-bind=SUPERALT,up,resizeactive,0 -10
-bind=SUPERALT,down,resizeactive,0 10
+#bind = $mainMod, G, togglegroup
+#bind = $mainMod SHIFT, G, changegroupactive
+# Muuta ikkunan kokoa
+#
+# Scroll through existing workspaces with mainMod + scroll
+bind = $mainMod, mouse_down, workspace, e+1
+bind = $mainMod, mouse_up, workspace, e-1
 
-bind=ALT,next,workspace,e+1
-bind=ALT,prior,workspace,e-1
+# Move/resize windows with mainMod + LMB/RMB and dragging
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
 
-# Mouse_* vittaa rullaan
-bind=SUPER,mouse_down,workspace,e+1
-bind=SUPER,mouse_up,workspace,e-1
-# Vasen ja oikea 
-bind=SUPER,mouse:272,movewindow
-bind=ALT,mouse:273,resizeactive
-
-exec-once=swaybg -i ~/Kuvat/Taustakuvat/wallpaperflare.mustekala.jpg 
-
-exec-once=swayidle timeout 300 "hyprctl dispatch dpms off" resume "hyprctl dispatch dpms on" timeout 500 "loginctl lock-session" timeout 600 "systemctl suspend" before-sleep gtklock lock gtklock
-#exec-once = hyprpaper preload = $taustaKuva
-#exec-once = hyprpaper wallpaper = DP-1,$taustaKuva
-
-exec-once=waybar 
-#exec-once=mako
-
+# Master sidokset
+bind = $mainMod,m,layoutmsg,cyclenext
 
 
+# Lähde: https://wiki.hyprland.org/FAQ/#some-of-my-apps-take-a-really-long-time-to-open
+#exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+#exec-once = ~/.config/hypr/xdg_desktop_portal.sh
+source = ~/.config/hypr/tämäkone.conf
+
+exec-once = hyprpaper
+exec-once = waybar
+exec-once = mako -c ~/.config/hypr/conf/mako.conf
+exec-once=~/.config/hypr/scripts/sleep.sh
+exec-once=/usr/lib/polkit-kde-authentication-agent-1 
+exec-once=nm-applet # --indicator & disown
