@@ -843,7 +843,7 @@ alias nv = nvim
 use ~/.config/nushell/scripts/historia.nu
 source ~/.config/nushell/init/zoxide_init.nu           # Hakemistot
 use ~/.cache/starship/init.nu                          # Prompt
-#source ~/.cache/carapace/init.nu                       # Komennon täydennys, ks. carapace-bin
+source ~/.cache/carapace/init.nu                       # Komennon täydennys, ks. carapace-bin
 source ~/.local/share/atuin/init.nu                    # Historia
 source /home/heikki/.config/broot/launcher/nushell/br  # File manager
 use ~/.config/nushell/themes/gruvbox-material-dark-medium.nu
