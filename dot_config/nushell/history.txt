@@ -1127,3 +1127,31 @@ ls ~
 ls
 nv config.kdl
 zellij
+ls
+du
+help du
+du -d 2
+cp ../nushell_0.84/history.txt .
+nv config.nu
+nvim config.nu
+cd nushewll
+cd nushell
+ls
+nv config.nu
+nvim config.nu
+contour
+checkupdates
+exit
+z nushell
+ls
+ls themes/
+ls
+ls plugins/
+echo  $nu.plugin-path
+register  https://github.com/amtoine/nu_plugin_kdl.git
+ls
+cat fo.nu 
+z nushell
+gupa 
+nv config.nu
+git pull
