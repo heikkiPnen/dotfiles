@@ -1155,3 +1155,52 @@ z nushell
 gupa 
 nv config.nu
 git pull
+chezmoi add ../nushell
+zi chez
+lazygit
+z nus
+z
+z nushell
+nv config.nu
+chezmoi add ./config.nu
+zi chez
+lazygit
+ls
+z dot_config/
+nv nushell/config.nu
+z chezmoi
+$nu.config-path
+z chezmoi
+zoxide init nushell | save -f ~/.zoxide.nu
+nvim ~/.zoxide.nu
+zoxide init nushell | save -f ~/.zoxide.nu
+sudo pacman -Syu
+z chezmoi
+z nus
+ls
+ls init/
+rm init/zoxide_init.nu
+nv env.nu
+cat history.txt 
+ls history.txt
+nv history.txt
+ls
+open nu_table.md
+open nu_table.md| to html
+open nu_table.md| to html | save nu.html
+firefox nu.html 
+rm nu.html
+help from
+ls **/*
+pacman -Ss hypridle
+paru -Ss hypridle
+paru -S hypridle
+z hypr
+ls
+chezmoi edit -v hyprland.conf
+chezmoi edit -v hypridle.conf
+nv hypridle.conf
+chezmoi edit -v hypridle.conf
+chezmoi edit -v hyprland.conf
+cat scripts/sleep.sh 
+chezmoi edit -v hyprland.conf

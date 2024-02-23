@@ -840,8 +840,8 @@ $env.config = {
 }
 
 alias nv = nvim
-use ~/.config/nushell/scripts/historia.nu
-source ~/.config/nushell/init/zoxide_init.nu           # Hakemistot
+use ~/.config/nushell/scripts/historia.nu        # Hakemistot
+source ~/.zoxide.nu
 use ~/.cache/starship/init.nu                          # Prompt
 source ~/.cache/carapace/init.nu                       # Komennon täydennys, ks. carapace-bin
 source ~/.local/share/atuin/init.nu                    # Historia
