@@ -1204,3 +1204,16 @@ chezmoi edit -v hypridle.conf
 chezmoi edit -v hyprland.conf
 cat scripts/sleep.sh 
 chezmoi edit -v hyprland.conf
+z nushell
+ls
+nv config.nu
+ls
+ls ~/.cache/carapace
+nv env.nu
+ls
+ls scripts/
+ls init/
+rm init/carapace_init.nu
+nv env.nu
+ls
+nv config.nu
