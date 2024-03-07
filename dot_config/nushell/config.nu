@@ -840,6 +840,7 @@ $env.config = {
 }
 
 alias nv = nvim
+source ~/.config/nushell/scripts/ya.nu
 use ~/.config/nushell/scripts/historia.nu        # Hakemistot
 source ~/.zoxide.nu
 use ~/.cache/starship/init.nu                          # Prompt
