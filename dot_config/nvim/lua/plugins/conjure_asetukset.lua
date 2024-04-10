@@ -1,3 +1,4 @@
+--lisp yms. kehitys
 return {
     "Olical/conjure",
     ft = { "clojure", "fennel", "python" }, -- etc

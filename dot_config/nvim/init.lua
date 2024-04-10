@@ -1,7 +1,7 @@
 
+require("config.mappings")
 require("config.lazy_asetukset")
 require("config.options")
-require("config.mappings")
 require("config.gui")
 vim.g.neomux_default_shell = "/usr/bin/fish"
 vim.cmd [[ set jumpoptions += "stack" ]] -- Katso helpistä
