@@ -1,7 +1,7 @@
 --lisp yms. kehitys
 return {
     "Olical/conjure",
-    ft = { "clisp", "fennel", "python", "lua" }, -- etc
+    ft = { "lisp", "fennel", "python", "lua", }, -- etc
     -- [Optional] cmp-conjure for cmp
     dependencies = {
         {
