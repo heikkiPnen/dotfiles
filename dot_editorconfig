@@ -17,7 +17,7 @@ indent_size = 3
 [*.py]
 indent_size = 4
 
-[*.{js,json,y{a,}ml,html,xml,kdl}]
+[*.{js,json,y{a,}ml,html,xml,kdl,lisp}]
 indent_size = 2
 
 [*.{md,Rmd,rst}]
