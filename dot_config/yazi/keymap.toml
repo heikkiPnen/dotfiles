@@ -242,8 +242,13 @@ keymap = [
 	# Filtering
 	{ on = [ "/" ], run = "filter", desc = "Apply a filter for the help items" },
 ]
-# keyjump -plugin
+# keyjump -plugi[[manager.prepend_keymap]]
+on   = [ "l" ]
+run  = "plugin --sync smart-enter"
+
+desc = "Enter the child directory, or open the file"
 [[manager.prepend_keymap]]
-on   = [ "i" ]
+on   = [ "ö" ]
 run  = "plugin keyjump"
 desc = "Keyjump (Normal mode)"
+
