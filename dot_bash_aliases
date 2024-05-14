@@ -1,0 +1,20 @@
+# Omia aliaksia hp/26-2019
+# omat bash-funktiot on .bash_profile:ssa
+#
+alias ls='ls --color=auto'
+alias ll='ls -Fl'
+alias lt='ls -Ft'
+alias lu='ls -Fu'
+alias la='ls -FA'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias h='history 25'
+alias isot='find  -maxdepth 1 -type d -exec du -sm {} \;|sort -n'
+
+# Palauttaa usb laitteet
+alias usb='ls -l /dev/disk/by-id/*usb*'
+
+alias vnopeus='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip --report-speed=bits'
+alias mntvadelma='sshfs -o IdentityFile=~/.ssh/id_rsa heikki@vadelma:/ /media/vadelma'
+alias bootkde='kquitapp5 plasmashell && kstart5 plasmashell'
+alias nv='nvim'
