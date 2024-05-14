@@ -11,6 +11,7 @@ if status is-interactive
     set fzf_preview_dir_cmd eza --all --color=always
     #fzf_configure_bindings --history=\ch  # c-r on varattu mcfly:lle
     #mcfly init fish | source
-    set -g GTRASH_HOME_TRASH_DIR "~/.local/share/Trash"
+    #set -g GTRASH_HOME_TRASH_DIR "~/.local/share/Trash"
+    #set -g GTRASH_ONLY_HOME_TRASH "true"
 end
 
