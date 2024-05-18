@@ -252,4 +252,3 @@ desc = "Enter the child directory, or open the file"
 on   = [ "ö" ]
 run  = "plugin keyjump"
 desc = "Keyjump (Normal mode)"
-
