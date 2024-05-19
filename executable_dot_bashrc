@@ -8,6 +8,7 @@ export XDG_DATA_HOME=/home/heikki/.local/share
 export ZK_NOTEBOOK_DIR="/home/heikki/Tekstit/md"
 export HISTCONTROL=erasedups # bash history
 export QT_QPA_PLATFORMTHEME="qt6ct" #hyprland tarvitsee
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # bash
 if [[ $- == *i* ]]; then # in interactive session
   set -o vi
