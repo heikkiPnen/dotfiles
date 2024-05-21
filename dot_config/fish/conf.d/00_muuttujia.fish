@@ -1,5 +1,6 @@
 
 set -a fish_function_path /home/heikki/.config/fish/omat_funkt
+set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 if status is-interactive
 # Vi -sidokset on määritelty .inpurc:ssä
