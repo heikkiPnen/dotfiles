@@ -4,15 +4,8 @@ local M = {
    dependencies = {
       -- LSP Support
       { 'neovim/nvim-lspconfig' }, -- Required
-      {
-         -- Optional
-         'williamboman/mason.nvim',
-         build = function()
-            pcall(vim.cmd, 'MasonUpdate')
-         end,
-      },
+      {'williamboman/mason.nvim', },
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' },     -- Required
       { 'hrsh7th/cmp-nvim-lsp' }, -- Required
@@ -63,7 +56,7 @@ M.config = function()
 
    require('mason').setup({})
    require('mason-lspconfig').setup({
-      ensure_installed = { 'lua_ls', },
+      ensure_installed = { 'lua_ls', 'pylsp', 'fennel', 'marksman', 'yamlls' },
       handlers = {
          function(server_name)
             require('lspconfig')[server_name].setup({})
