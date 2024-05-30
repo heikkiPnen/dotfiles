@@ -16,7 +16,5 @@ prepend_rules = [
 
 [plugin]
 prepend_previewers = [
-    { name = "*.csv", exec = "bat" },
-    #    { name = "*.md", exec = "bat" },
     { name = "*.md", run = "glow" },
 ]

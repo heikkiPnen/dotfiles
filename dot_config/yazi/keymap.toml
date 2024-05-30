@@ -1,8 +1,13 @@
+# Omia
+[[manager.prepend_keymap]]
+on = [ "g", "z" ]
+run = "cd ~/Tekstit/md/Zettelkasten"
+desc = "Zettelkasten -hakemistoon"
+# Plugins
 [[manager.prepend_keymap]]
 on   = [ "i" ]
 run  = "plugin keyjump --args=global"
 desc = "Keyjump (Global mode)"
-
 [[manager.prepend_keymap]]
 on  = [ "T" ]
 run = "plugin --sync max-preview"
