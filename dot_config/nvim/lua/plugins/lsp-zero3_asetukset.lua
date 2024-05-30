@@ -56,7 +56,7 @@ M.config = function()
 
    require('mason').setup({})
    require('mason-lspconfig').setup({
-      ensure_installed = { 'lua_ls', 'pylsp', 'fennel', 'marksman', 'yamlls' },
+      --ensure_installed = { 'lua_ls', 'pylsp', 'fennel-ls', 'marksman', 'yamlls' },
       handlers = {
          function(server_name)
             require('lspconfig')[server_name].setup({})
