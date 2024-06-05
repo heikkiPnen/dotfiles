@@ -19,4 +19,3 @@ endif
 require('telekasten').setup({
   home = vim.fn.expand("~/Tekstit/md/Zettelkasten"), -- Put the name of your notes directory here
 })
-require("oil").setup()
